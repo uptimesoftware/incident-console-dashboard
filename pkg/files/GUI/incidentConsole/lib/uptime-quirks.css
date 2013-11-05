@@ -1,0 +1,16 @@
+.ui-multiselect li {
+	height: 20px;
+}
+
+#errorBoxContent p {
+	padding-top: 5px;
+}
+
+div.FlashWrapper {
+	width: 49.9%;
+	text-align: center;
+}
+
+div.FlashError {
+	text-align: center;
+}

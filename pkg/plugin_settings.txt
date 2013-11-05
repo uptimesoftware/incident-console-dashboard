@@ -1,6 +1,7 @@
-name=SNMP Generic
-version=1.0
-platforms=windows linux
-description=Monitor SNMP data by doing snmpget or snmpwalk
+name=Incident Console Dashboard
+version=1.1
+platforms=windows
+description=This dashboard allows users to visualize how many elements are current in the various states.
 requiresAgentScript=false
 restartCore=false
+enablePHPExtensions=php_curl;

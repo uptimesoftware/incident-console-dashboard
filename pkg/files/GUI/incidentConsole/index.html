@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset='UTF-8'>
+	
+	<?php header('Access-Control-Allow-Origin: *'); ?>
+        <title>Incident Console</title>
+		<link rel="stylesheet" type="text/css" href="lib/stackedBar.css" />
+		<link rel="stylesheet" type="text/css" href="lib/jquery.qtip.min.css" />
+		<link rel="stylesheet" type="text/css" href="lib/uptime.css" />
+		<link rel="stylesheet" type="text/css" href="lib/demo_table.css" />
+		
+        <script type="text/javascript" src="d3/d3.v2.min.js"></script>
+		<script type='text/javascript' src='lib/uptimeApi.js'></script>
+		<script type="text/javascript" src="lib/jquery-1.8.1.min.js"></script>
+
+		<script type="text/javascript" src="lib/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+		</script>
+
+		<script type="text/javascript" src="lib/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="lib/stackedBarHorizontal.js"></script> 
+		<script type="text/javascript" src="lib/main.js"></script>
+		<script type="text/javascript" src="lib/helper.js"></script>
+		
+		
+    </head>
+    <body>
+
+		
+		<div id='lastRefresh'></div>
+		Refresh Interval:
+		<select class="refreshInterval" value="1">
+			<option value="0">Off</option>
+			<option value="1">1 min</option>
+			<option value="2">2 min</option>
+			<option value="2">3 min</option>
+			<option value="5" selected>5 min</option>
+		</select>
+		
+		
+		<ul id='hosts'></ul>
+		<div id='content'></div>
+		<div id='monitors'></div>
+		<div id='groups'></div>
+
+		<div id='recentStatusTitle'></div>
+		<table cellpadding="0" cellspacing="0" border="0" class="display" id="recentStatusTable">
+		</table>
+		
+		
+    </body>
+</html>  

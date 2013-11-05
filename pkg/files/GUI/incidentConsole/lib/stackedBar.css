@@ -1,0 +1,74 @@
+rect.OK {
+	fill: #8BD037;
+}
+rect.Warning {
+	fill: #E9E762;
+}
+rect.Critical  {
+	fill: #DD4849;
+}
+rect.Unknown {
+	fill: #CFCFCF;
+}
+rect.Maintenance {
+	fill: #7C80AE;
+}
+.tooltipsy
+{
+    padding: 10px;
+    max-width: 200px;
+    color: #303030;
+    background-color: #f5f5b5;
+    border: 1px solid #deca7e;
+}
+.tooltip{
+   position: absolute;
+   fixed: true;
+   top: 500;
+   right: 500;
+   z-index: 30000;
+   
+}
+.bt-content {
+  font-size: small;
+  color: #000;
+  line-height: normal;
+}
+
+/* styling for active target elements - usually for background hilighting */
+.bt-active {
+  /* example:
+  background-color: yellow !important;
+  */
+}
+/*
+.ui-tooltip-rounded {
+	padding-right: 5px;
+	overflow-y: auto !important;
+    max-height: 400px !important;
+	
+	
+	white-space:nowrap !important;
+
+}*/
+
+.myStyle{
+/*
+	font-size: 16px !important;
+	*/
+	/*
+	font-family: Verdana, Arial, Helvetica, sans-serif !important;
+	font-size: 13px !important;
+	line-height:100% !important;
+	*/
+	padding-right: 5px;
+	overflow-y: auto !important;
+    max-height: 400px !important;
+	
+	
+	white-space:nowrap !important;
+}        
+ul
+{
+    list-style-type: none;
+}

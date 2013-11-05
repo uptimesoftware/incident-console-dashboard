@@ -1,53 +1,62 @@
-# IBM AS400 Monitor
-## Tags : plugin   as400  
+# Incident Console Dashboard
+## Tags : plugin   incident  
 
-## Category: plugin
+## Category: dashboard
 
-##Version Compatibility<br/>Module Name</th><th>up.time Monitoring Station Version</th>
+### Description: 
 
+ This dashboard allows users to visualize how many elements are current in the various states. Features include:
 
-  
-    * IBM AS400 Monitor 2.2 - 7.2, 7.1
-  
-
-  
-    * IBM AS400 Monitor 2.1 - 7.0
-  
-
-  
-    * IBM AS400 Monitor 2.0 - 6.0
-  
-
-  
-    * IBM AS400 Monitor 1.1 - 5.5
-  
-
-
-### Description: Monitor CPU/Memory performance on an IBM (iSeries) AS/400 server.
+ * aggregated view of elements and alerts from one or more monitoring stations
+ * smart grouping of elements based on the element's type
+ * view the elements that make up of the smart group by mouse hover
+ * easily access an element's status page by clicking on links in the tooltip
+ * instantly filter alerts in the monitor status table by clicking on the bar
 
 ### Supported Monitoring Stations: 7.2, 7.1
 ### Supported Agents: None; no agent required
-### Installation Notes: <p><a href="https://github.com/uptimesoftware/uptime-plugin-manager">Install using the up.time Plugin Manager</a>
-1. Currently there is a limitation with the max upload size in Apache (&lt;2MB) so we'll have to increase it first.</p>
+### Installation Notes:  
+ [Install using the up.time Plugin Manager](https://github.com/uptimesoftware/plugin-manager-for-uptime)
+ The up.time Controller is needed for this dashboard. Please read this example on how to configure it.
 
-<p>Edit the php.ini file and modify the options below.</p>
+ After the Plugin Manager finishes installing the dashboard, execute the following steps to add a tab in up.time:
 
-<p>Windows Monitoring Station location: [uptime_dir]\apache\php\php.ini
-Linux/Solaris Monitoring Station location: [uptime_dir]/apache/conf/php.ini</p>
+ 1. On the system where up.time is installed, open the following file for edit:
 
-<p>; Maximum size of POST data that PHP will accept.
-post_max_size = 100M
-; Maximum allowed size for uploaded files.
-upload_max_filesize = 100M</p>
+ [up.time_root_dir]/GUI/incidentConsole/lib/main.js
 
-<ol>
-<li>Restart the up.time Web Server for the changes to go into effect.</li>
-</ol>
+ 2. At the top of the file, change/add the values of the variables so that the dashboard can connect to the up.time API.
+ NOTE: currently the password cannot contain special characters. If your password contains special characters, either change the password or setup a read-only user that does not have special characters in the password.
+
+ 3. Verify if the dashboard works by going to the following URL in a browser:
+
+ http://[up.time_host]:[up.time_port]/incidentConsole
+
+ 4. Login to the monitoring station UI
+
+ 5. Click on the "Config" button at the top
+
+ 6. Click on "up.time Configuration" on the left
+
+ 7. Paste the following into the configuration text box:
+
+ myportal.custom.tab2.enabled=true
+ myportal.custom.tab2.name=Incidents
+ myportal.custom.tab2.URL=/incidentConsole/
+
+ Depending on how many custom tabs you already have in My Portal, you might need to change "tab2" to an appropriate value.
+
+ 8. Click the "Update" button
+
+ 9. You should now see a new tab in My Portal
+
+ Note:
+ IE sometimes goes into quirks mode which cause the dashboard to fail. Either force IE to disable quirks mode or use another browser such as Google Chrome.
 
 
 ### Dependencies: <p>n/a</p>
 
-### Input Variables: * AS/400 user name* AS/400 password
-### Output Variables: * Basic Monitor (MonitorAS400.xml)* CPU Utilization* Disk Free* Number of Jobs* CURSTG (memory)* PTF Monitor (MonitorAS400ptf.xml)* Message Count (number of messages)
-### Languages Used: * Java
+### Languages Used: 
+* PHP
+* Others
 

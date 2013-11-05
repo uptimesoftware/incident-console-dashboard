@@ -1,0 +1,56 @@
+/* CSS3 overrides for uptime.css, for pages with HTML5 doctype */ 
+.InfoLabel {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height: 14px;
+	padding: 3px 5px 3px 7px;
+}
+
+.Info {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height: 14px;
+	padding: 3px 5px 3px 7px;
+}
+
+.IndentInfo {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height: 14px;
+	padding: 3px 5px 3px 27px;
+}
+
+.FlushInfo {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height: 14px;
+	padding: 3px 5px 3px 0px;
+}
+
+.SelectList {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height: 16px;
+	margin: 1px 0 1px 0;
+}
+
+.FormField {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height: 14px;
+	padding: 1px;
+	margin: 1px 0 1px 0;
+}
+
+.tablehelper tbody tr td {
+	height: 14px;
+	padding: 3px 5px 3px 7px;
+}
+
+.unit {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	height: 14px;
+	padding: 3px;
+}
