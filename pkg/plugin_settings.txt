@@ -1,6 +1,6 @@
 name=Incident Console Dashboard
-version=1.1
-platforms=windows
+version=1.2
+platforms=windows linux
 description=This dashboard allows users to visualize how many elements are current in the various states.
 requiresAgentScript=false
 restartCore=false
